@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>MEMO GAME</h1>
+
+    <div id="selezionaTema">
+        <p>Scegli il tema del gioco:</p>
+        <button onclick="selezionaTema('animali')">Animali</button>
+        <button onclick="selezionaTema('fiori')">Fiori</button>
+        <button onclick="selezionaTema('piante')">Piante</button>
+    </div>
+
+    <div id="menu" style="display: none;">
+        <p>Scegli la modalità:</p>
+        <button onclick="selezionaModalità('2giocatori')">2 Giocatori</button>
+        <button onclick="selezionaModalità('tempo')">Sfida a Tempo</button>
+    </div>
+
+    <p id="turno" style="display: none;">Giocatore 1, tocca a te!</p>
+    <p id="timer" style="display: none;">Tempo: 0s</p>
+    <p id="punteggio1" style="display: none;">Giocatore 1: 0 punti</p>
+    <p id="punteggio2" style="display: none;">Giocatore 2: 0 punti</p>
+
+    <div class="game-container">
+        <div id="griglia"></div>
+    </div>
+
+    <button id="restart" style="display: none;">Ricomincia</button>
+
+    <h2>Classifica</h2>
+    <ul id="classifica"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
