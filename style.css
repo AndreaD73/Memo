@@ -9,17 +9,9 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
-    background-size: 400% 400%;
-    animation: sfondoAnimato 10s infinite alternate;
+    background: #3498db; /* Colore di sfondo aggiornato */
     color: white;
     padding: 20px;
-}
-
-/* Animazione dello sfondo */
-@keyframes sfondoAnimato {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
 }
 
 /* Titolo */
