@@ -1,3 +1,11 @@
+/* Reset globale */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile del body */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -5,18 +13,22 @@ body {
     background-size: 400% 400%;
     animation: sfondoAnimato 10s infinite alternate;
     color: white;
+    padding: 20px;
 }
 
+/* Animazione dello sfondo */
 @keyframes sfondoAnimato {
     0% { background-position: 0% 50%; }
     100% { background-position: 100% 50%; }
 }
 
+/* Titolo */
 h1 {
     font-size: 36px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Bottoni */
 button {
     padding: 10px 20px;
     font-size: 18px;
@@ -32,22 +44,22 @@ button:hover {
     background-color: #d63031;
 }
 
+/* Contenitore del gioco: limita la larghezza e centra il contenuto */
 .game-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
 }
 
+/* Griglia di gioco */
 #griglia {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
+/* Carte: mantengono un formato quadrato con aspect-ratio */
 .carta {
-    width: 100px;
-    height: 100px;
     background-color: white;
     color: black;
     font-size: 70px;
@@ -58,12 +70,14 @@ button:hover {
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease-in-out;
+    aspect-ratio: 1 / 1;
 }
 
 .carta:hover {
     transform: scale(1.1);
 }
 
+/* Bottone di restart */
 #restart {
     margin-top: 20px;
     padding: 10px 20px;
@@ -79,16 +93,16 @@ button:hover {
     background-color: #219150;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Regole responsive per schermi piccoli */
 @media (max-width: 600px) {
-  #griglia {
-    grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(4, 80px);
-    gap: 8px;
-  }
-  .carta {
-    width: 80px;
-    height: 80px;
-    font-size: 50px;
-  }
+    h1 {
+        font-size: 28px;
+    }
+    button, #restart {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    .carta {
+        font-size: 50px;
+    }
 }
