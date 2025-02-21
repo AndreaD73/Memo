@@ -78,3 +78,17 @@ button:hover {
 #restart:hover {
     background-color: #219150;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  #griglia {
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 8px;
+  }
+  .carta {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+  }
+}
